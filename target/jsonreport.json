@@ -1,0 +1,193 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Verify login functionality",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1043821000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User is on the my login page of real estate site",
+            "match": {
+              "location": "realestatedefinition.user_is_on_the_my_login_page_of_real_estate_site()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 364944700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User enter \"admin\" and \"admin@123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"admin\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"admin@123\"",
+                  "offset": 23
+                }
+              ],
+              "location": "realestatedefinition.user_enter_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 11520255000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User click on sign in button",
+            "match": {
+              "location": "realestatedefinition.user_click_on_sign_in_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 35400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User navigates to the dashboard",
+            "match": {
+              "location": "realestatedefinition.user_navigates_to_the_dashboard()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3583954400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User click on properties on the menu bar",
+            "match": {
+              "location": "realestatedefinition.user_click_on_properties_on_the_menu_bar()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1814562800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User click on all properties",
+            "match": {
+              "location": "realestatedefinition.user_click_on_all_properties()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1356841900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User gets redirected to the all properties page",
+            "match": {
+              "location": "realestatedefinition.user_gets_redirected_to_the_all_properties_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-10-14T06:44:46.816Z",
+        "before": [
+          {
+            "result": {
+              "duration": 64225881400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "realestateannotation.initialization()"
+            }
+          }
+        ],
+        "line": 137,
+        "name": "verify the Sorting functionality in title field",
+        "description": "",
+        "id": "automation-testing-of-real-estate-website;verify-the-sorting-functionality-in-title-field",
+        "after": [
+          {
+            "result": {
+              "duration": 71400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "realestateannotation.close()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7125701800,
+              "status": "passed"
+            },
+            "line": 138,
+            "name": "user click on the arrow of the title field",
+            "match": {
+              "location": "realestatedefinition.user_click_on_the_arrow_of_the_title_field()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 139,
+            "name": "user able to see the in title field all tiltle name arrange in sorting order",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 140,
+            "name": "user click the arrow of the date field",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 141,
+            "name": "user able to see all dates arrange in sorting order",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag12"
+          }
+        ]
+      }
+    ],
+    "name": "Automation Testing of Real Estate Website",
+    "description": "",
+    "id": "automation-testing-of-real-estate-website",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Feature/realestate.feature",
+    "tags": []
+  }
+]

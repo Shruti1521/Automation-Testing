@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="1" time="91.051066">
+<testcase classname="Automation Testing of Real Estate Website" name="verify the Sorting functionality in title field" time="91.051066">
+<skipped><![CDATA[Given User is on the my login page of real estate site......................passed
+When User enter "admin" and "admin@123".....................................passed
+And User click on sign in button............................................passed
+Then User navigates to the dashboard........................................passed
+When User click on properties on the menu bar...............................passed
+And User click on all properties............................................passed
+Then User gets redirected to the all properties page........................passed
+When user click on the arrow of the title field.............................passed
+Then user able to see the in title field all tiltle name arrange in sorting order.undefined
+Then user click the arrow of the date field.................................undefined
+Then user able to see all dates arrange in sorting order....................undefined
+]]></skipped>
+</testcase>
+</testsuite>
