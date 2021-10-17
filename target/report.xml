@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="1" time="91.051066">
-<testcase classname="Automation Testing of Real Estate Website" name="verify the Sorting functionality in title field" time="91.051066">
-<skipped><![CDATA[Given User is on the my login page of real estate site......................passed
-When User enter "admin" and "admin@123".....................................passed
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="83.705329">
+<testcase classname="Automation Testing of Real Estate Website" name="bug-verify title field accepted more than 30 characters" time="83.705329">
+<failure message="java.lang.AssertionError&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:87)&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:96)&#13;&#10;&#9;at StepDefinition.realestatedefinition.user_enter_the_in_title_field(realestatedefinition.java:1463)&#13;&#10;&#9;at ✽.user enter the &quot;jshfbneiururfbvbejwlehfbdhfh3rhu4ghewjh8463tryuegfhgfjvfhdvwuqgfhfhqwfuwe&quot; in title field(file:src/test/java/Feature/realestate.feature:212)&#13;&#10;"><![CDATA[Given User is on the my login page of real estate site......................passed
+When User enter "mohankrishna176@gmail.com" and "Secret@123&&"..............passed
 And User click on sign in button............................................passed
 Then User navigates to the dashboard........................................passed
 When User click on properties on the menu bar...............................passed
 And User click on all properties............................................passed
 Then User gets redirected to the all properties page........................passed
-When user click on the arrow of the title field.............................passed
-Then user able to see the in title field all tiltle name arrange in sorting order.undefined
-Then user click the arrow of the date field.................................undefined
-Then user able to see all dates arrange in sorting order....................undefined
-]]></skipped>
+When user select  title name on title field column..........................passed
+Then user click on quick edit optin in title field..........................passed
+When user enter the "jshfbneiururfbvbejwlehfbdhfh3rhu4ghewjh8463tryuegfhgfjvfhdvwuqgfhfhqwfuwe" in title field.failed
+Then user click of that update button.......................................skipped
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.fail(Assert.java:96)
+	at StepDefinition.realestatedefinition.user_enter_the_in_title_field(realestatedefinition.java:1463)
+	at ✽.user enter the "jshfbneiururfbvbejwlehfbdhfh3rhu4ghewjh8463tryuegfhgfjvfhdvwuqgfhfhqwfuwe" in title field(file:src/test/java/Feature/realestate.feature:212)
+]]></failure>
 </testcase>
 </testsuite>

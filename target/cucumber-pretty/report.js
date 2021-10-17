@@ -4,6 +4,49 @@ formatter.feature({
   "description": "",
   "keyword": "Feature"
 });
+formatter.scenarioOutline({
+  "name": "bug-verify title field accepted more than 30 characters",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@tag1"
+    }
+  ]
+});
+formatter.step({
+  "name": "user select  title name on title field column",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user click on quick edit optin in title field",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user enter the \"\u003ctitlename\u003e\" in title field",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user click of that update button",
+  "keyword": "Then "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "titlename"
+      ]
+    },
+    {
+      "cells": [
+        "jshfbneiururfbvbejwlehfbdhfh3rhu4ghewjh8463tryuegfhgfjvfhdvwuqgfhfhqwfuwe"
+      ]
+    }
+  ]
+});
 formatter.background({
   "name": "Verify login functionality",
   "description": "",
@@ -23,7 +66,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "User enter \"admin\" and \"admin@123\"",
+  "name": "User enter \"mohankrishna176@gmail.com\" and \"Secret@123\u0026\u0026\"",
   "keyword": "When "
 });
 formatter.match({
@@ -83,48 +126,55 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "verify the Sorting functionality in title field",
+  "name": "bug-verify title field accepted more than 30 characters",
   "description": "",
-  "keyword": "Scenario",
+  "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@tag12"
+      "name": "@tag1"
     }
   ]
 });
 formatter.step({
-  "name": "user click on the arrow of the title field",
+  "name": "user select  title name on title field column",
   "keyword": "When "
 });
 formatter.match({
-  "location": "realestatedefinition.user_click_on_the_arrow_of_the_title_field()"
+  "location": "realestatedefinition.user_select_title_name_on_title_field_column()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user able to see the in title field all tiltle name arrange in sorting order",
+  "name": "user click on quick edit optin in title field",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "realestatedefinition.user_click_on_quick_edit_optin_in_title_field()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "user click the arrow of the date field",
-  "keyword": "Then "
+  "name": "user enter the \"jshfbneiururfbvbejwlehfbdhfh3rhu4ghewjh8463tryuegfhgfjvfhdvwuqgfhfhqwfuwe\" in title field",
+  "keyword": "When "
 });
-formatter.match({});
+formatter.match({
+  "location": "realestatedefinition.user_enter_the_in_title_field(String)"
+});
 formatter.result({
-  "status": "undefined"
+  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.fail(Assert.java:96)\r\n\tat StepDefinition.realestatedefinition.user_enter_the_in_title_field(realestatedefinition.java:1463)\r\n\tat ✽.user enter the \"jshfbneiururfbvbejwlehfbdhfh3rhu4ghewjh8463tryuegfhgfjvfhdvwuqgfhfhqwfuwe\" in title field(file:src/test/java/Feature/realestate.feature:212)\r\n",
+  "status": "failed"
 });
 formatter.step({
-  "name": "user able to see all dates arrange in sorting order",
+  "name": "user click of that update button",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "realestatedefinition.user_click_of_that_update_button()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "skipped"
 });
 formatter.after({
   "status": "passed"

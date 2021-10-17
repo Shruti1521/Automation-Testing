@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1043821000,
+              "duration": 1111020200,
               "status": "passed"
             },
             "line": 4,
@@ -23,20 +23,20 @@
           },
           {
             "result": {
-              "duration": 364944700,
+              "duration": 192216500,
               "status": "passed"
             },
             "line": 5,
-            "name": "User enter \"admin\" and \"admin@123\"",
+            "name": "User enter \"mohankrishna176@gmail.com\" and \"Secret@123\u0026\u0026\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"admin\"",
+                  "val": "\"mohankrishna176@gmail.com\"",
                   "offset": 11
                 },
                 {
-                  "val": "\"admin@123\"",
-                  "offset": 23
+                  "val": "\"Secret@123\u0026\u0026\"",
+                  "offset": 43
                 }
               ],
               "location": "realestatedefinition.user_enter_and(String,String)"
@@ -45,7 +45,7 @@
           },
           {
             "result": {
-              "duration": 11520255000,
+              "duration": 10171050300,
               "status": "passed"
             },
             "line": 6,
@@ -57,7 +57,7 @@
           },
           {
             "result": {
-              "duration": 35400,
+              "duration": 6013524100,
               "status": "passed"
             },
             "line": 7,
@@ -69,7 +69,7 @@
           },
           {
             "result": {
-              "duration": 3583954400,
+              "duration": 6866098500,
               "status": "passed"
             },
             "line": 8,
@@ -81,7 +81,7 @@
           },
           {
             "result": {
-              "duration": 1814562800,
+              "duration": 3864643800,
               "status": "passed"
             },
             "line": 9,
@@ -93,7 +93,7 @@
           },
           {
             "result": {
-              "duration": 1356841900,
+              "duration": 6017173700,
               "status": "passed"
             },
             "line": 10,
@@ -106,11 +106,11 @@
         ]
       },
       {
-        "start_timestamp": "2021-10-14T06:44:46.816Z",
+        "start_timestamp": "2021-10-17T17:29:51.845Z",
         "before": [
           {
             "result": {
-              "duration": 64225881400,
+              "duration": 42665795700,
               "status": "passed"
             },
             "match": {
@@ -118,14 +118,14 @@
             }
           }
         ],
-        "line": 137,
-        "name": "verify the Sorting functionality in title field",
+        "line": 218,
+        "name": "bug-verify title field accepted more than 30 characters",
         "description": "",
-        "id": "automation-testing-of-real-estate-website;verify-the-sorting-functionality-in-title-field",
+        "id": "automation-testing-of-real-estate-website;bug-verify-title-field-accepted-more-than-30-characters;;2",
         "after": [
           {
             "result": {
-              "duration": 71400,
+              "duration": 25600,
               "status": "passed"
             },
             "match": {
@@ -134,51 +134,67 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 7125701800,
+              "duration": 189309100,
               "status": "passed"
             },
-            "line": 138,
-            "name": "user click on the arrow of the title field",
+            "line": 210,
+            "name": "user select  title name on title field column",
             "match": {
-              "location": "realestatedefinition.user_click_on_the_arrow_of_the_title_field()"
+              "location": "realestatedefinition.user_select_title_name_on_title_field_column()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 3138572100,
+              "status": "passed"
             },
-            "line": 139,
-            "name": "user able to see the in title field all tiltle name arrange in sorting order",
-            "match": {},
+            "line": 211,
+            "name": "user click on quick edit optin in title field",
+            "match": {
+              "location": "realestatedefinition.user_click_on_quick_edit_optin_in_title_field()"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "undefined"
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.fail(Assert.java:96)\r\n\tat StepDefinition.realestatedefinition.user_enter_the_in_title_field(realestatedefinition.java:1463)\r\n\tat ✽.user enter the \"jshfbneiururfbvbejwlehfbdhfh3rhu4ghewjh8463tryuegfhgfjvfhdvwuqgfhfhqwfuwe\" in title field(file:src/test/java/Feature/realestate.feature:212)\r\n",
+              "duration": 3430348100,
+              "status": "failed"
             },
-            "line": 140,
-            "name": "user click the arrow of the date field",
-            "match": {},
-            "keyword": "Then "
+            "line": 212,
+            "name": "user enter the \"jshfbneiururfbvbejwlehfbdhfh3rhu4ghewjh8463tryuegfhgfjvfhdvwuqgfhfhqwfuwe\" in title field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"jshfbneiururfbvbejwlehfbdhfh3rhu4ghewjh8463tryuegfhgfjvfhdvwuqgfhfhqwfuwe\"",
+                  "offset": 15
+                }
+              ],
+              "location": "realestatedefinition.user_enter_the_in_title_field(String)"
+            },
+            "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 7700,
+              "status": "skipped"
             },
-            "line": 141,
-            "name": "user able to see all dates arrange in sorting order",
-            "match": {},
+            "line": 213,
+            "name": "user click of that update button",
+            "match": {
+              "location": "realestatedefinition.user_click_of_that_update_button()"
+            },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@tag12"
+            "name": "@tag1"
           }
         ]
       }

@@ -2,14 +2,14 @@ Feature: Automation Testing of Real Estate Website
 
   Background: Verify login functionality
     Given User is on the my login page of real estate site
-    When User enter "admin" and "admin@123"
+    When User enter "mohankrishna176@gmail.com" and "Secret@123&&"
     And User click on sign in button
     Then User navigates to the dashboard
     When User click on properties on the menu bar
     And User click on all properties
     Then User gets redirected to the all properties page
     
-    
+ 
   Scenario Outline: Verify search functionality for search the properties
     When User enter the title field of "<titlename>" in the search bar
     Then User click on search properties option
@@ -17,32 +17,59 @@ Feature: Automation Testing of Real Estate Website
 
     Examples: 
       | titlename |
-      | pune |  
+      | pune |
+      #| Mumbai |  
       
-  
-  Scenario Outline: Verify add new properties functionality
-    When User click on add new option
-    Then User navigate to add property page
-    Then User enter "<name>" in add property section
-    
-     Examples: 
-      | name |
-      | dhule |  
-      
-  
-  Scenario Outline: verify bulk action on all properties page
-    When User select "<titlename>" in the title field
-    Then User click on checkbox 
-    When User select the option from drop down list
-    Then User click on apply button
-    Then User navigate to the all properties page
+
+  Scenario Outline: verify move to trash using bulk action functionality
+    When User select "<titlename>" on title field
+    Then User click of that title name checkbox 
+    When User select the bulk action
+    Then user click on move to trash from the drop down list 
+    Then User click on that apply button
+    Then user able to see the display message on screen
     
     
     Examples: 
       | titlename |
-      | shirpur |  
+      | Hopes |  
       
+      
+  Scenario Outline: Verify expire property using bulk action functionality
+     When User select "<titlename>" in title field section
+     Then User click on the checkbox of title name
+     When User select bulk action 
+     Then user click on expire property of drop down list
+     Then user click that apply button 
+     Then this property add to expired properties section
+     
+     Examples: 
+     | titlename |
+     | jalgaon |
+    
  
+  Scenario Outline: verify the edit using bulk action functionality  
+      When User select the "<titlename>" in title field
+      Then User click on checkbox of that title name
+      When User select bulk actions section
+      Then User click the edit option from drop down list
+      Then User click on Apply button
+      Then user click the  checkbox of "<feature>"
+      Then user click the checkbox of "<region>" also
+      Then user select the author 
+      And user click on "<authorname>" from given drop down list
+      Then user select the comment
+      And user click the "<comment>" option from drop down list
+      Then user select the status 
+      And user click on the "<status>"option from given drop down list
+      When user click on the update button 
+      Then message display on all properties page
+      
+   		Examples: 
+   		| titlename | feature | region | authorname | comment | status |
+			| Automation | 2Bhk land | Description TestingU | Sneha Shet (Sneha) | Allowed | Published |
+   		
+  
   Scenario Outline: verify all dates on all properties page 
     When user select the "All dates"   
     Then User click the "<month year>" on drop down list
@@ -62,12 +89,15 @@ Feature: Automation Testing of Real Estate Website
     #| June 2020 |
     #| May 2020 |
     
-  
-  Scenario: Verify pagination on all properties page
-    When user click on arrow
-    Then user redirected to nextS page
-   # Then user again click on arrow 
-   # Then user redirected to third page
+
+  Scenario: Verify pagination functionality on all properties page
+    When user checks if pagination exists
+    Then user is on current page
+    Then user check the next button
+    And user click on last page button and navigate to last page
+    Then user click on first page button and redirect to first page
+    Then user count total no of items on all properties table
+    
     
    
     Scenario Outline: verify the trash functionality on all properties page
@@ -81,69 +111,31 @@ Feature: Automation Testing of Real Estate Website
       | title name |
       | Hello Kitty |
       
-   
+    
    Scenario Outline: Verify the  quick edit section
-     When user click on title
-     Then user click on quick edit option of title field
+     When user click "<title>" from title field
+     Then user click on quick edit option of that title name
      Then user enter "<slug>"
-     When user select the month from drop down list
+     When user select the month field
+     Then user click on "<month>" on drop down list
      Then user enter the "<date>"
      Then user enter the "<year>" option
-     Then user enter "<password>" if not private
-     Then user click on checkbox of feature 
+     Then user enter "<hour>" time
+     And user enter "<minute>" time also
+     Then user select the authorname
+     And user click on "<author>"
+     Then user click on checkbox of feature
+     Then user click the checkbox of region field 
      Then user click on allow comment
-     Then user selct the option from the drop down list
+     Then user select the status field
+     And user click on the "<statusfield>" option into drop down list
      Then user click on update button
     
      Examples:
-   | slug | date | year | password |
-    | mountain | 13 | 2021 | shruti@34 |
-     
+   | title | slug | month |date | year | hour | minute | author | statusfield |
+   | Accomplish | hii | 06-Jun |16 | 2021 | 10 | 35 | simran gupta (admin) | Published |
    
-     Scenario: Verify the column functionality in screen options
-       When user click on screen options
-       Then user click on checkbox of Author
-       Then user click on the apply button
-       Then user able see the author section is disable on all properties page
-       
-       
-
-    Scenario: Verify the pagination in screen options
-       When user click on the screen options
-       Then user click on number of item per page option
-       Then user click the apply button
-       Then user able see the number of item on screen
-       
-   
-    Scenario Outline: verify the edit functionality  
-      When User select the "<titlename>" in title field
-      Then User click on checkbox of that title name
-      When User select the edit option from drop down list
-      Then User click on Apply button
-      Then user remove the title from bulk edit 
-      Then user select the any checkbox of "<feature>"
-      Then user select the any checkbox of "<region>" also
-      Then user select the "<author>" from given drop down list
-      Then user select the "<comment>" option from drop down list
-      Then user select the "<status>" option from given drop down list
-      When user click on the update button 
-      Then user able to see the updated field
-      
-   		Examples: 
-   		| titlename | feature | region | author | comment | status |
-   		| champion |  Book_room | Region1 | Sneha Shet (Sneha) | Allowed | Published |
-   		
-   @tag12
-  Scenario: verify the Sorting functionality in title field
-    When user click on the arrow of the title field
-    Then user able to see the in title field all tiltle name arrange in sorting order
-    Then user click the arrow of the date field
-    Then user able to see all dates arrange in sorting order
-    
-    
-   
-  
-  Scenario Outline: Verify view functionality
+    Scenario Outline: Verify view functionality
     When user click on title name
     Then user click on view option 
     Then user navigate to that titlename property and able to see enquiry page
@@ -155,7 +147,73 @@ Feature: Automation Testing of Real Estate Website
   | aditi | aditichavan1199@gmail.com | welcome | ABC |
   #| shruti | shrutipatil1501@gmail.com | hi | XYZ |
   #| prachi | prachipatil@gmail.com | success | MNO |
-  
-          
+  #| mrunmayee | mrunmayee@gmail.com | hello | PQR |
+     
+   
+     Scenario: Verify the column functionality in screen options
+       When user click on screen options
+       Then user click on checkbox of Author
+       Then user click on the apply button
+       Then user able see the author section is disable on all properties page
+       
+ 
+   Scenario Outline: verify the number of item per page of pagination functionaliy
+    When user click on the screen options
+    Then user enter the number of item per page "<number>"
+    Then user click apply button
+    And user navigate to all properties page and able to see in changes in pagination field
     
+    Examples:
+    | number |
+    | 100 |
+    
+  
+    Scenario: verify the Sorting functionality in title,date,comments field
+      When user click the arrow of the title field column
+      Then all title name arrange in ascending order
+      Then all title name arrange in descending order
+      When user click on the arrow of date field
+      Then all date arrange in ascending order
+      Then all date arrange in descending order
+      When user click on arrow of comment field
+      Then all comments arrange in ascending 
+      Then comments should be arrange in descending order
+    
+
+   
+    Scenario Outline: bug-verify passowrd field accepted more than 10 characters
+    When user select the title field of title name
+    Then user click on quick edit field 
+    When user enter the "<password1>" in password field
+    Then user click the update button 
+    
+    Examples:
+    | password1 |
+    | Shruti@34 |
+   # | Shrutip@6786 |
+   
+     
+     Scenario Outline: bug-verify title field accepted special characters
+        When user select title
+    		Then user click on quick edit which is below the title 
+    		Then user enter "<titlename>" in title block
+    		Then user click on the update button of quick edit field
+    		
+    		Examples:
+    		| titlename |
+    		#| welcome@123 |
+    		| @#$%&*&&^$ | 
+    		
+    		
+    @tag1
+    Scenario Outline: bug-verify title field accepted more than 30 characters
+    When user select  title name on title field column
+    Then user click on quick edit optin in title field 
+    When user enter the "<titlename>" in title field
+    Then user click of that update button 
+    
+    Examples:
+    | titlename |
+   # | sunflower |
+ 		| jshfbneiururfbvbejwlehfbdhfh3rhu4ghewjh8463tryuegfhgfjvfhdvwuqgfhfhqwfuwe |
   
